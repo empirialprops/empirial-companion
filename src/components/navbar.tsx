@@ -18,6 +18,8 @@ import {
 } from "@radix-ui/react-icons";
 import { User, LogOut, ShieldCheck, Ticket, Star, Calendar } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils/utils";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { openAuthModal, getStoredUser, logoutUser, UserProfile, DEMO_TRADER, saveUser } from "@/lib/utils/auth-store";
@@ -27,9 +29,13 @@ import { LogoTridentE } from "@/components/ui/logo-trident-e";
 import { EmpirialLogo } from "@/components/ui/empirial-logo";
 
 export default function NavBar() {
+  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [currentUser, setCurrentUser] = useState<UserProfile | null>(null);
+
+  const isActive = (href: string) =>
+    pathname === href || pathname.startsWith(href + "/");
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
