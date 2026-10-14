@@ -175,7 +175,7 @@ export default function NavBar() {
             y: { duration: 5, repeat: Infinity, ease: "easeInOut" },
             opacity: { duration: 0.5, ease: "easeOut" },
           }}
-          className={`max-w-7xl mx-auto rounded-2xl border backdrop-blur-2xl backdrop-saturate-150 transition-[box-shadow,border-color,background-color] duration-300 ease-out ${
+          className={`max-w-7xl mx-auto rounded-[2rem] border backdrop-blur-2xl backdrop-saturate-150 transition-[box-shadow,border-color,background-color] duration-300 ease-out ${
             showNavbarBlur
               ? "bg-popover/60 border-border/50 shadow-[0_12px_40px_-12px_rgba(0,0,0,0.28)] dark:shadow-[0_12px_40px_-10px_rgba(0,0,0,0.7)]"
               : "bg-popover/40 border-border/30 shadow-[0_10px_32px_-16px_rgba(0,0,0,0.2)] dark:shadow-[0_10px_32px_-14px_rgba(0,0,0,0.55)]"
@@ -232,12 +232,12 @@ export default function NavBar() {
                     <ChevronDownIcon className="ml-1 h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-72 p-1.5 rounded-2xl bg-popover/70 backdrop-blur-2xl backdrop-saturate-150 border border-border/50 shadow-[0_16px_48px_-16px_rgba(0,0,0,0.3)] dark:shadow-[0_16px_48px_-14px_rgba(0,0,0,0.75)] space-y-0.5">
+                <DropdownMenuContent className="w-72 p-2 rounded-[1.75rem] bg-popover/70 backdrop-blur-2xl backdrop-saturate-150 border border-border/50 shadow-[0_16px_48px_-16px_rgba(0,0,0,0.3)] dark:shadow-[0_16px_48px_-14px_rgba(0,0,0,0.75)] space-y-0.5">
                   {browseItems.map((item) => (
                     <DropdownMenuItem
                       key={item.title}
                       asChild
-                      className="group p-2.5 rounded-xl cursor-pointer hover:bg-accent focus:bg-accent data-[highlighted]:bg-accent transition-colors outline-none"
+                      className="group p-2.5 rounded-[1.4rem] cursor-pointer hover:bg-accent focus:bg-accent data-[highlighted]:bg-accent transition-colors outline-none"
                     >
                       <Link href={item.href} className="flex items-start w-full">
                         {item.icon}
