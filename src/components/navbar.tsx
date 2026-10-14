@@ -232,7 +232,7 @@ export default function NavBar() {
                     <ChevronDownIcon className="ml-1 h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-72 p-1.5 rounded-2xl bg-popover/95 backdrop-blur-xl border border-border shadow-xl space-y-0.5">
+                <DropdownMenuContent className="w-72 p-1.5 rounded-2xl bg-popover/70 backdrop-blur-2xl backdrop-saturate-150 border border-border/50 shadow-[0_16px_48px_-16px_rgba(0,0,0,0.3)] dark:shadow-[0_16px_48px_-14px_rgba(0,0,0,0.75)] space-y-0.5">
                   {browseItems.map((item) => (
                     <DropdownMenuItem
                       key={item.title}
@@ -283,7 +283,7 @@ export default function NavBar() {
                       <ChevronDownIcon className="w-3.5 h-3.5 opacity-70" />
                     </button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end" className="w-64 p-1.5 rounded-2xl bg-popover/95 backdrop-blur-xl border border-border shadow-xl space-y-0.5">
+                  <DropdownMenuContent align="end" className="w-64 p-1.5 rounded-2xl bg-popover/70 backdrop-blur-2xl backdrop-saturate-150 border border-border/50 shadow-[0_16px_48px_-16px_rgba(0,0,0,0.3)] dark:shadow-[0_16px_48px_-14px_rgba(0,0,0,0.75)] space-y-0.5">
                     <div className="p-2.5 rounded-xl bg-muted/50 border border-border/60 mb-1 space-y-1">
                       <div className="flex items-center justify-between">
                         <span className="font-bold text-xs text-foreground truncate">{currentUser.displayName}</span>
