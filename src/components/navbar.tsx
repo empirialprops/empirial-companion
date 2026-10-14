@@ -264,7 +264,7 @@ export default function NavBar() {
                   <DropdownMenuTrigger asChild>
                     <button
                       type="button"
-                      className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition-all shadow-xs cursor-pointer"
+                      className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all shadow-xs cursor-pointer"
                     >
                       <div className="w-6 h-6 rounded-lg bg-primary/10 overflow-hidden flex items-center justify-center text-[10px] font-extrabold shrink-0 border border-border/40">
                         {currentUser.avatarUrl ? (
@@ -283,8 +283,8 @@ export default function NavBar() {
                       <ChevronDownIcon className="w-3.5 h-3.5 opacity-70" />
                     </button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end" className="w-64 p-1.5 rounded-2xl bg-popover/70 backdrop-blur-2xl backdrop-saturate-150 border border-border/50 shadow-[0_16px_48px_-16px_rgba(0,0,0,0.3)] dark:shadow-[0_16px_48px_-14px_rgba(0,0,0,0.75)] space-y-0.5">
-                    <div className="p-2.5 rounded-xl bg-muted/50 border border-border/60 mb-1 space-y-1">
+                      <DropdownMenuContent align="end" className="w-64 p-2 rounded-[1.75rem] bg-popover/70 backdrop-blur-2xl backdrop-saturate-150 border border-border/50 shadow-[0_16px_48px_-16px_rgba(0,0,0,0.3)] dark:shadow-[0_16px_48px_-14px_rgba(0,0,0,0.75)] space-y-0.5">
+                    <div className="p-2.5 rounded-[1.4rem] bg-muted/50 border border-border/60 mb-1 space-y-1">
                       <div className="flex items-center justify-between">
                         <span className="font-bold text-xs text-foreground truncate">{currentUser.displayName}</span>
                         <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-emerald-500/15 text-emerald-600 dark:text-emerald-400">
@@ -337,7 +337,7 @@ export default function NavBar() {
                 /* Disconnected State: Connect Button */
                 <Button
                   onClick={openAuthModal}
-                  className="hidden sm:inline-flex items-center gap-2 rounded-xl font-semibold px-4 h-9 bg-primary text-primary-foreground hover:bg-primary/90 transition-all shadow-xs ring-1 ring-border/50 active:scale-[0.97] cursor-pointer text-xs"
+                  className="hidden sm:inline-flex items-center gap-2 rounded-full font-semibold px-4 h-9 bg-primary text-primary-foreground hover:bg-primary/90 transition-all shadow-xs ring-1 ring-border/50 active:scale-[0.97] cursor-pointer text-xs"
                   size="sm"
                 >
                   <User className="w-3.5 h-3.5" />
