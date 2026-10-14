@@ -168,10 +168,10 @@ export default function NavBar() {
     <>
       <AuthModal />
       <nav
-        className={`sticky top-0 z-50 w-full transition-[background-color,backdrop-filter] duration-300 ease-out ${
+        className={`sticky top-0 z-50 w-full border-b transition-[background-color,backdrop-filter,border-color,box-shadow] duration-300 ease-out ${
           showNavbarBlur
-            ? "backdrop-blur-md bg-background/80 border-b border-border"
-            : "bg-transparent"
+            ? "backdrop-blur-xl bg-background/75 border-border/70 shadow-[0_1px_24px_-8px_rgba(0,0,0,0.12)] dark:shadow-[0_1px_24px_-8px_rgba(0,0,0,0.6)]"
+            : "bg-transparent border-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -204,9 +204,18 @@ export default function NavBar() {
               <EmpirialLogo height={36} />
 
               {navItems.map((item) => (
-                <Button asChild key={item.name} variant="ghost" size="sm" className="font-medium text-muted-foreground hover:text-foreground">
-                  <Link href={item.href}>{item.name}</Link>
-                </Button>
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={cn(
+                    "relative px-3 py-1.5 rounded-full text-sm font-medium transition-colors duration-200 outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                    isActive(item.href)
+                      ? "text-foreground bg-muted"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
+                  )}
+                >
+                  {item.name}
+                </Link>
               ))}
 
               {/* Browse Dropdown */}
