@@ -375,7 +375,7 @@ export default function NavBar() {
                     >
                       <Link
                         href={item.href}
-                        className="block px-3 py-2 text-base font-medium text-foreground hover:bg-muted rounded-xl transition-colors"
+                        className="block px-3 py-2 text-base font-medium text-foreground hover:bg-muted rounded-2xl transition-colors"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {item.name}
@@ -391,7 +391,7 @@ export default function NavBar() {
                       <Link
                         key={item.title}
                         href={item.href}
-                        className="flex items-center gap-2 px-3 py-2 text-sm text-foreground hover:bg-muted rounded-xl transition-colors"
+                        className="flex items-center gap-2 px-3 py-2 text-sm text-foreground hover:bg-muted rounded-2xl transition-colors"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {item.icon}
@@ -405,7 +405,7 @@ export default function NavBar() {
                       <Link
                         href="/profile"
                         onClick={() => setIsMenuOpen(false)}
-                        className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-bold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-xs"
+                        className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-full text-sm font-bold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-xs"
                       >
                         <div className="w-5 h-5 rounded-full bg-primary/10 overflow-hidden flex items-center justify-center text-[10px] shrink-0">
                           {currentUser.avatarUrl ? (
@@ -422,7 +422,7 @@ export default function NavBar() {
                           setIsMenuOpen(false);
                           openAuthModal();
                         }}
-                        className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-xs"
+                        className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-full text-sm font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-xs"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
