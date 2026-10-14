@@ -1,0 +1,10 @@
+{
+  "source": "github:empirialprops/empirial",
+  "capabilities": [
+    { "capability": "application code (TanStack Start port of Next.js site, 44 routes, admin panel)", "source": "repo src/", "outcome": "copy into project", "status": "in_progress", "next_action": "sync files, install deps, verify build" },
+    { "capability": "Firebase backend (Auth + Firestore)", "source": "src/lib/firebase, .env", "outcome": "preserve external provider", "status": "pending", "next_action": "user must add Firebase web config + service account via Lovable secrets" },
+    { "capability": "Discord OAuth callback", "source": "src/routes/discord.callback.ts", "outcome": "preserve", "status": "pending", "next_action": "needs DISCORD_CLIENT_ID/SECRET secrets" },
+    { "capability": "database records", "source": "none in repo", "outcome": "pending user export", "status": "pending", "next_action": "request Firestore export after preview" },
+    { "capability": "secrets (.env)", "source": "repo .env", "outcome": "not copied to repo", "status": "pending", "next_action": "request via secure secret form at verification time" }
+  ]
+}
