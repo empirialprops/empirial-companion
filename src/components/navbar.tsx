@@ -266,7 +266,7 @@ export default function NavBar() {
                       type="button"
                       className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all shadow-xs cursor-pointer"
                     >
-                      <div className="w-6 h-6 rounded-lg bg-primary/10 overflow-hidden flex items-center justify-center text-[10px] font-extrabold shrink-0 border border-border/40">
+                      <div className="w-6 h-6 rounded-full bg-primary/10 overflow-hidden flex items-center justify-center text-[10px] font-extrabold shrink-0 border border-border/40">
                         {currentUser.avatarUrl ? (
                           <img
                             src={currentUser.avatarUrl}
@@ -294,28 +294,28 @@ export default function NavBar() {
                       <p className="text-[11px] text-muted-foreground truncate">{currentUser.email}</p>
                     </div>
 
-                    <DropdownMenuItem asChild className="p-2 rounded-xl cursor-pointer hover:bg-accent focus:bg-accent data-[highlighted]:bg-accent transition-colors outline-none">
+                    <DropdownMenuItem asChild className="p-2 rounded-[1.4rem] cursor-pointer hover:bg-accent focus:bg-accent data-[highlighted]:bg-accent transition-colors outline-none">
                       <Link href="/profile" className="flex items-center gap-2 text-xs font-semibold text-foreground">
                         <User className="w-3.5 h-3.5 text-muted-foreground" />
                         <span>Trader Dashboard</span>
                       </Link>
                     </DropdownMenuItem>
 
-                    <DropdownMenuItem asChild className="p-2 rounded-xl cursor-pointer hover:bg-accent focus:bg-accent data-[highlighted]:bg-accent transition-colors outline-none">
+                    <DropdownMenuItem asChild className="p-2 rounded-[1.4rem] cursor-pointer hover:bg-accent focus:bg-accent data-[highlighted]:bg-accent transition-colors outline-none">
                       <Link href="/profile" className="flex items-center gap-2 text-xs font-semibold text-foreground">
                         <Star className="w-3.5 h-3.5 text-muted-foreground" />
                         <span>My Reviews</span>
                       </Link>
                     </DropdownMenuItem>
 
-                    <DropdownMenuItem asChild className="p-2 rounded-xl cursor-pointer hover:bg-accent focus:bg-accent data-[highlighted]:bg-accent transition-colors outline-none">
+                    <DropdownMenuItem asChild className="p-2 rounded-[1.4rem] cursor-pointer hover:bg-accent focus:bg-accent data-[highlighted]:bg-accent transition-colors outline-none">
                       <Link href="/profile" className="flex items-center gap-2 text-xs font-semibold text-foreground">
                         <Calendar className="w-3.5 h-3.5 text-muted-foreground" />
                         <span>Registered Events</span>
                       </Link>
                     </DropdownMenuItem>
 
-                    <DropdownMenuItem asChild className="p-2 rounded-xl cursor-pointer hover:bg-accent focus:bg-accent data-[highlighted]:bg-accent transition-colors outline-none">
+                    <DropdownMenuItem asChild className="p-2 rounded-[1.4rem] cursor-pointer hover:bg-accent focus:bg-accent data-[highlighted]:bg-accent transition-colors outline-none">
                       <Link href="/profile" className="flex items-center gap-2 text-xs font-semibold text-foreground">
                         <Ticket className="w-3.5 h-3.5 text-muted-foreground" />
                         <span>Contact Support</span>
@@ -326,7 +326,7 @@ export default function NavBar() {
 
                     <DropdownMenuItem
                       onClick={() => logoutUser()}
-                      className="p-2 rounded-xl cursor-pointer text-xs font-semibold text-destructive hover:bg-destructive/10 focus:bg-destructive/10 data-[highlighted]:bg-destructive/10 transition-colors outline-none flex items-center gap-2"
+                      className="p-2 rounded-[1.4rem] cursor-pointer text-xs font-semibold text-destructive hover:bg-destructive/10 focus:bg-destructive/10 data-[highlighted]:bg-destructive/10 transition-colors outline-none flex items-center gap-2"
                     >
                       <LogOut className="w-3.5 h-3.5" />
                       <span>Disconnect Wallet / Account</span>
@@ -407,7 +407,7 @@ export default function NavBar() {
                         onClick={() => setIsMenuOpen(false)}
                         className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-bold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-xs"
                       >
-                        <div className="w-5 h-5 rounded bg-primary/10 overflow-hidden flex items-center justify-center text-[10px] shrink-0">
+                        <div className="w-5 h-5 rounded-full bg-primary/10 overflow-hidden flex items-center justify-center text-[10px] shrink-0">
                           {currentUser.avatarUrl ? (
                             <img src={currentUser.avatarUrl} alt={currentUser.displayName} className="w-full h-full object-cover" />
                           ) : (
