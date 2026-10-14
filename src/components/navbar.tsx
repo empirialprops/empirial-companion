@@ -167,15 +167,21 @@ export default function NavBar() {
   return (
     <>
       <AuthModal />
-      <nav
-        className={`sticky top-0 z-50 w-full border-b transition-[background-color,backdrop-filter,border-color,box-shadow] duration-300 ease-out ${
-          showNavbarBlur
-            ? "backdrop-blur-xl bg-background/75 border-border/70 shadow-[0_1px_24px_-8px_rgba(0,0,0,0.12)] dark:shadow-[0_1px_24px_-8px_rgba(0,0,0,0.6)]"
-            : "bg-transparent border-transparent"
-        }`}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+      <nav className="sticky top-3 z-50 w-full px-3 sm:px-5 lg:px-8">
+        <motion.div
+          initial={{ y: -56, opacity: 0 }}
+          animate={{ y: [0, -4, 0], opacity: 1 }}
+          transition={{
+            y: { duration: 5, repeat: Infinity, ease: "easeInOut" },
+            opacity: { duration: 0.5, ease: "easeOut" },
+          }}
+          className={`max-w-7xl mx-auto rounded-2xl border backdrop-blur-2xl backdrop-saturate-150 transition-[box-shadow,border-color,background-color] duration-300 ease-out ${
+            showNavbarBlur
+              ? "bg-popover/60 border-border/50 shadow-[0_12px_40px_-12px_rgba(0,0,0,0.28)] dark:shadow-[0_12px_40px_-10px_rgba(0,0,0,0.7)]"
+              : "bg-popover/40 border-border/30 shadow-[0_10px_32px_-16px_rgba(0,0,0,0.2)] dark:shadow-[0_10px_32px_-14px_rgba(0,0,0,0.55)]"
+          }`}
+        >
+          <div className="flex justify-between items-center h-16 px-4 sm:px-5">
             {/* Mobile menu button */}
             <div className="flex sm:hidden">
               <Button
@@ -436,7 +442,7 @@ export default function NavBar() {
               </motion.div>
             )}
           </AnimatePresence>
-        </div>
+        </motion.div>
       </nav>
     </>
   );
