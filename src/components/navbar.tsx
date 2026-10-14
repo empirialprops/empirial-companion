@@ -175,10 +175,10 @@ export default function NavBar() {
             y: { duration: 5, repeat: Infinity, ease: "easeInOut" },
             opacity: { duration: 0.5, ease: "easeOut" },
           }}
-          className={`max-w-7xl mx-auto rounded-2xl border backdrop-blur-2xl backdrop-saturate-150 transition-[box-shadow,border-color,background-color] duration-300 ease-out ${
+          className={`max-w-7xl mx-auto rounded-[2rem] border backdrop-blur-2xl backdrop-saturate-150 transition-[box-shadow,border-color,background-color] duration-300 ease-out ${
             showNavbarBlur
-              ? "bg-popover/60 border-border/50 shadow-[0_12px_40px_-12px_rgba(0,0,0,0.28)] dark:shadow-[0_12px_40px_-10px_rgba(0,0,0,0.7)]"
-              : "bg-popover/40 border-border/30 shadow-[0_10px_32px_-16px_rgba(0,0,0,0.2)] dark:shadow-[0_10px_32px_-14px_rgba(0,0,0,0.55)]"
+              ? "bg-popover/35 border-border/40 shadow-[0_12px_40px_-12px_rgba(0,0,0,0.28)] dark:shadow-[0_12px_40px_-10px_rgba(0,0,0,0.7)]"
+              : "bg-popover/25 border-border/25 shadow-[0_10px_32px_-16px_rgba(0,0,0,0.2)] dark:shadow-[0_10px_32px_-14px_rgba(0,0,0,0.55)]"
           }`}
         >
           <div className="flex justify-between items-center h-16 px-4 sm:px-5">
@@ -232,12 +232,12 @@ export default function NavBar() {
                     <ChevronDownIcon className="ml-1 h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-72 p-1.5 rounded-2xl bg-popover/70 backdrop-blur-2xl backdrop-saturate-150 border border-border/50 shadow-[0_16px_48px_-16px_rgba(0,0,0,0.3)] dark:shadow-[0_16px_48px_-14px_rgba(0,0,0,0.75)] space-y-0.5">
+                <DropdownMenuContent className="w-72 p-2 rounded-[1.75rem] bg-popover/50 backdrop-blur-2xl backdrop-saturate-150 border border-border/50 shadow-[0_16px_48px_-16px_rgba(0,0,0,0.3)] dark:shadow-[0_16px_48px_-14px_rgba(0,0,0,0.75)] space-y-0.5">
                   {browseItems.map((item) => (
                     <DropdownMenuItem
                       key={item.title}
                       asChild
-                      className="group p-2.5 rounded-xl cursor-pointer hover:bg-accent focus:bg-accent data-[highlighted]:bg-accent transition-colors outline-none"
+                      className="group p-2.5 rounded-[1.4rem] cursor-pointer hover:bg-accent focus:bg-accent data-[highlighted]:bg-accent transition-colors outline-none"
                     >
                       <Link href={item.href} className="flex items-start w-full">
                         {item.icon}
@@ -264,9 +264,9 @@ export default function NavBar() {
                   <DropdownMenuTrigger asChild>
                     <button
                       type="button"
-                      className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition-all shadow-xs cursor-pointer"
+                      className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all shadow-xs cursor-pointer"
                     >
-                      <div className="w-6 h-6 rounded-lg bg-primary/10 overflow-hidden flex items-center justify-center text-[10px] font-extrabold shrink-0 border border-border/40">
+                      <div className="w-6 h-6 rounded-full bg-primary/10 overflow-hidden flex items-center justify-center text-[10px] font-extrabold shrink-0 border border-border/40">
                         {currentUser.avatarUrl ? (
                           <img
                             src={currentUser.avatarUrl}
@@ -283,8 +283,8 @@ export default function NavBar() {
                       <ChevronDownIcon className="w-3.5 h-3.5 opacity-70" />
                     </button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end" className="w-64 p-1.5 rounded-2xl bg-popover/70 backdrop-blur-2xl backdrop-saturate-150 border border-border/50 shadow-[0_16px_48px_-16px_rgba(0,0,0,0.3)] dark:shadow-[0_16px_48px_-14px_rgba(0,0,0,0.75)] space-y-0.5">
-                    <div className="p-2.5 rounded-xl bg-muted/50 border border-border/60 mb-1 space-y-1">
+                      <DropdownMenuContent align="end" className="w-64 p-2 rounded-[1.75rem] bg-popover/50 backdrop-blur-2xl backdrop-saturate-150 border border-border/50 shadow-[0_16px_48px_-16px_rgba(0,0,0,0.3)] dark:shadow-[0_16px_48px_-14px_rgba(0,0,0,0.75)] space-y-0.5">
+                    <div className="p-2.5 rounded-[1.4rem] bg-muted/50 border border-border/60 mb-1 space-y-1">
                       <div className="flex items-center justify-between">
                         <span className="font-bold text-xs text-foreground truncate">{currentUser.displayName}</span>
                         <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-emerald-500/15 text-emerald-600 dark:text-emerald-400">
@@ -294,28 +294,28 @@ export default function NavBar() {
                       <p className="text-[11px] text-muted-foreground truncate">{currentUser.email}</p>
                     </div>
 
-                    <DropdownMenuItem asChild className="p-2 rounded-xl cursor-pointer hover:bg-accent focus:bg-accent data-[highlighted]:bg-accent transition-colors outline-none">
+                    <DropdownMenuItem asChild className="p-2 rounded-[1.4rem] cursor-pointer hover:bg-accent focus:bg-accent data-[highlighted]:bg-accent transition-colors outline-none">
                       <Link href="/profile" className="flex items-center gap-2 text-xs font-semibold text-foreground">
                         <User className="w-3.5 h-3.5 text-muted-foreground" />
                         <span>Trader Dashboard</span>
                       </Link>
                     </DropdownMenuItem>
 
-                    <DropdownMenuItem asChild className="p-2 rounded-xl cursor-pointer hover:bg-accent focus:bg-accent data-[highlighted]:bg-accent transition-colors outline-none">
+                    <DropdownMenuItem asChild className="p-2 rounded-[1.4rem] cursor-pointer hover:bg-accent focus:bg-accent data-[highlighted]:bg-accent transition-colors outline-none">
                       <Link href="/profile" className="flex items-center gap-2 text-xs font-semibold text-foreground">
                         <Star className="w-3.5 h-3.5 text-muted-foreground" />
                         <span>My Reviews</span>
                       </Link>
                     </DropdownMenuItem>
 
-                    <DropdownMenuItem asChild className="p-2 rounded-xl cursor-pointer hover:bg-accent focus:bg-accent data-[highlighted]:bg-accent transition-colors outline-none">
+                    <DropdownMenuItem asChild className="p-2 rounded-[1.4rem] cursor-pointer hover:bg-accent focus:bg-accent data-[highlighted]:bg-accent transition-colors outline-none">
                       <Link href="/profile" className="flex items-center gap-2 text-xs font-semibold text-foreground">
                         <Calendar className="w-3.5 h-3.5 text-muted-foreground" />
                         <span>Registered Events</span>
                       </Link>
                     </DropdownMenuItem>
 
-                    <DropdownMenuItem asChild className="p-2 rounded-xl cursor-pointer hover:bg-accent focus:bg-accent data-[highlighted]:bg-accent transition-colors outline-none">
+                    <DropdownMenuItem asChild className="p-2 rounded-[1.4rem] cursor-pointer hover:bg-accent focus:bg-accent data-[highlighted]:bg-accent transition-colors outline-none">
                       <Link href="/profile" className="flex items-center gap-2 text-xs font-semibold text-foreground">
                         <Ticket className="w-3.5 h-3.5 text-muted-foreground" />
                         <span>Contact Support</span>
@@ -326,7 +326,7 @@ export default function NavBar() {
 
                     <DropdownMenuItem
                       onClick={() => logoutUser()}
-                      className="p-2 rounded-xl cursor-pointer text-xs font-semibold text-destructive hover:bg-destructive/10 focus:bg-destructive/10 data-[highlighted]:bg-destructive/10 transition-colors outline-none flex items-center gap-2"
+                      className="p-2 rounded-[1.4rem] cursor-pointer text-xs font-semibold text-destructive hover:bg-destructive/10 focus:bg-destructive/10 data-[highlighted]:bg-destructive/10 transition-colors outline-none flex items-center gap-2"
                     >
                       <LogOut className="w-3.5 h-3.5" />
                       <span>Disconnect Wallet / Account</span>
@@ -337,7 +337,7 @@ export default function NavBar() {
                 /* Disconnected State: Connect Button */
                 <Button
                   onClick={openAuthModal}
-                  className="hidden sm:inline-flex items-center gap-2 rounded-xl font-semibold px-4 h-9 bg-primary text-primary-foreground hover:bg-primary/90 transition-all shadow-xs ring-1 ring-border/50 active:scale-[0.97] cursor-pointer text-xs"
+                  className="hidden sm:inline-flex items-center gap-2 rounded-full font-semibold px-4 h-9 bg-primary text-primary-foreground hover:bg-primary/90 transition-all shadow-xs ring-1 ring-border/50 active:scale-[0.97] cursor-pointer text-xs"
                   size="sm"
                 >
                   <User className="w-3.5 h-3.5" />
@@ -375,7 +375,7 @@ export default function NavBar() {
                     >
                       <Link
                         href={item.href}
-                        className="block px-3 py-2 text-base font-medium text-foreground hover:bg-muted rounded-xl transition-colors"
+                        className="block px-3 py-2 text-base font-medium text-foreground hover:bg-muted rounded-2xl transition-colors"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {item.name}
@@ -391,7 +391,7 @@ export default function NavBar() {
                       <Link
                         key={item.title}
                         href={item.href}
-                        className="flex items-center gap-2 px-3 py-2 text-sm text-foreground hover:bg-muted rounded-xl transition-colors"
+                        className="flex items-center gap-2 px-3 py-2 text-sm text-foreground hover:bg-muted rounded-2xl transition-colors"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {item.icon}
@@ -405,9 +405,9 @@ export default function NavBar() {
                       <Link
                         href="/profile"
                         onClick={() => setIsMenuOpen(false)}
-                        className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-bold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-xs"
+                        className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-full text-sm font-bold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-xs"
                       >
-                        <div className="w-5 h-5 rounded bg-primary/10 overflow-hidden flex items-center justify-center text-[10px] shrink-0">
+                        <div className="w-5 h-5 rounded-full bg-primary/10 overflow-hidden flex items-center justify-center text-[10px] shrink-0">
                           {currentUser.avatarUrl ? (
                             <img src={currentUser.avatarUrl} alt={currentUser.displayName} className="w-full h-full object-cover" />
                           ) : (
@@ -422,7 +422,7 @@ export default function NavBar() {
                           setIsMenuOpen(false);
                           openAuthModal();
                         }}
-                        className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-xs"
+                        className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-full text-sm font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-xs"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
