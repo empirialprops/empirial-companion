@@ -177,7 +177,7 @@ export default function NavBar() {
           }}
           className={`max-w-7xl mx-auto rounded-[2rem] border backdrop-blur-2xl backdrop-saturate-150 transition-[box-shadow,border-color,background-color] duration-300 ease-out ${
             showNavbarBlur
-              ? "bg-popover/35 border-white/10 border-border/40 shadow-[0_12px_40px_-12px_rgba(0,0,0,0.28)] dark:shadow-[0_12px_40px_-10px_rgba(0,0,0,0.7)]"
+              ? "bg-popover/35 border-border/40 shadow-[0_12px_40px_-12px_rgba(0,0,0,0.28)] dark:shadow-[0_12px_40px_-10px_rgba(0,0,0,0.7)]"
               : "bg-popover/25 border-border/25 shadow-[0_10px_32px_-16px_rgba(0,0,0,0.2)] dark:shadow-[0_10px_32px_-14px_rgba(0,0,0,0.55)]"
           }`}
         >
