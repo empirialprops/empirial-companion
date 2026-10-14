@@ -221,9 +221,9 @@ export default function NavBar() {
               {/* Browse Dropdown */}
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="sm" className="font-medium text-muted-foreground hover:text-foreground">
+                  <Button variant="ghost" size="sm" className="group rounded-full px-3 font-medium text-muted-foreground hover:text-foreground hover:bg-muted/60">
                     Browse
-                    <ChevronDownIcon className="ml-1 h-4 w-4" />
+                    <ChevronDownIcon className="ml-1 h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-72 p-1.5 rounded-2xl bg-popover/95 backdrop-blur-xl border border-border shadow-xl space-y-0.5">
@@ -331,7 +331,7 @@ export default function NavBar() {
                 /* Disconnected State: Connect Button */
                 <Button
                   onClick={openAuthModal}
-                  className="hidden sm:inline-flex items-center gap-2 rounded-xl font-semibold px-4 h-9 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-xs cursor-pointer text-xs"
+                  className="hidden sm:inline-flex items-center gap-2 rounded-xl font-semibold px-4 h-9 bg-primary text-primary-foreground hover:bg-primary/90 transition-all shadow-xs ring-1 ring-border/50 active:scale-[0.97] cursor-pointer text-xs"
                   size="sm"
                 >
                   <User className="w-3.5 h-3.5" />
